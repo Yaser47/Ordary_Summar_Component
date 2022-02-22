@@ -1,0 +1,128 @@
+:root {
+	--dark-blue: hsl(223, 47%, 23%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Pale-blue: hsl(225, 100%, 94%);
+	--hover-link-color: hsl(228deg 45% 44% / 80%);;
+	--main-transition: 0.3s;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	background-image: url("../images/pattern-background-desktop.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: hsl(225, 100%, 94%);
+}
+@media (max-width: 767px) {
+	body {
+		background-image: url("../images/pattern-background-mobile.svg");
+	}
+}
+a {
+	display: block;
+}
+
+
+.parent {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border-radius: 15px;
+	width: 450px;
+}
+@media (max-width: 767px) {
+	.parent {
+		width: 350px;
+	}
+}
+.main-img {
+	max-width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.child {
+	padding: 40px;
+	text-align: center;
+}
+@media (max-width: 767px) {
+	.child {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+.title {
+	margin: 0;
+	font-size: 1.8em;
+	color: var(--dark-blue);
+}
+.text {
+	margin: 20px 0 0;
+	color: var(--Desaturated-blue);
+	line-height: 1.6;
+}
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 0;
+	padding: 20px;
+	background-color: var(--Very-pale-blue);
+	border-radius: 10px;
+}
+.info {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.plan {
+	margin: 0 0 10px;
+	color: var(--dark-blue);
+	font-weight: 900;
+}
+.price {
+	margin: 0;
+	color: var(--Desaturated-blue);
+}
+a.change {
+	color: var(--Bright-blue);
+	transition: var(--main-transition);
+	font-size: 0.9em;
+	font-weight: 700;
+}
+a.change:hover {
+	text-decoration: none;
+	color: var(--hover-link-color);
+}
+a.payment {
+	text-decoration: none;
+	background-color: var(--Bright-blue);
+	color: white;
+	padding: 15px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	font-size: 0.9em;
+	font-weight: 700;
+	box-shadow: 0 12px 24px rgb(0 0 0 / 15%);
+	transition: var(--main-transition);
+}
+a.payment:hover {
+	background-color: var(--hover-link-color);
+}
+a.cancel {
+	text-decoration: none;
+	color: var(--Desaturated-blue);
+	font-weight: 900;
+	font-size: 0.9em;
+	transition: var(--main-transition);
+}
+a.cancel:hover {
+	color: var(--dark-blue);
+}
